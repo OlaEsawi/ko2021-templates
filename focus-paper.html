@@ -9,7 +9,8 @@
 
 <body>
 
-<h1>Short Paper on Knowledge Organization (replace with your own title)</h1>
+<h1>A review on current use of semantic web technologies in the AEC industry and a future proposal for improvement
+</h1>
 
 <div id="authors">
 Your Name Here
@@ -20,16 +21,35 @@ Your Name Here
 
 <h3>Introduction</h3>
 
-<p>Write your paper here. Use between 1200 and 1500 words (excluding references). See the course information on Canvas for the detailed guidelines and requirements.</p>
+<p>The use of semantic web technologies has increased in the last few years in many domains and industries, including the architecture, engineering and construction (AEC) industry [1]. Ontologies are one example of Semantic web technologies that are used as a way of knowledge sharing between software systems [2]. They provide many benefits that encourage domain experts to make use of them. For example, achieving interoperability, linking across domains, and applying logical inference are aims that need to be achieved in the AEC industry. These aims can be achieved through the development of ontologies. Therefore, many efforts have been made to convert the IFC EXPRESS schema into ifcOWL ontology. IFC EXPRESS schema is a complex data model developed to support the AEC domain. This paper will provide a contribution by discovering the efforts that have been made to exploit semantic web technologies, namely RDF and ontologies to develop the ifcOWL ontology. Depending on this discovery, this paper will provide a proposal to improve the ifcOWL ontology.</p>
 
-<h3>Approach/Analysis/Case Study/...</h3>
+<h3>The aims</h3>
 
-<p>...</p>
+<p>Three main aims exist of implementing semantic web technologies in the AEC industry. The first aim is to achieve interoperability, which means allowing for exchanging information and making use of it. This is an old aim in the AEC industry, and to achieve it, a data model called IFC was developed and used before using semantic web technologies, but it was not easily extensible. Therefore, semantic web technologies were proposed and tested. The second aim is to achieve linking across domains, which is an essential aim in the AEC industry to successfully construct a building, because the construction industry consists of a number of specialized departments. These departments need a close collaboration and an effective management approach for the information that comes from different sources. Semantic web technologies allow for linking diverse information domains into one web of linked building data, through which the second aim can be realised. The third aim is logical inference, which has many use cases in the AEC industry, for example to calculate cost estimation of the construction of a building. Semantic web technologies allow the reasoning and extraction of extra information based on existing information. Therefore, semantic web technologies can be used to realize the third aim in the AEC industry [1].
+</p>
 
+<h3>RDF and Ontologies</h3>
+ 
+<p>RDF is a flexible machine-readable language used in semantic web technologies. It allows the exchange of information and the integration of domains in a systematic manner. By adopting RDF language, the information is represented in a directed graph, where each node represents a concept or an object with an identifier (URI), making the graph clearly labelled. This representation of information in a single directed graph is reusable by both humans and computers. The semantic RDF graph can be improved by the use of ontologies, and the basic elements to describe ontologies are contained in the RDF Schema (RDFS). Through the use of RDFS, it is possible to give the ontologies an extra semantic meaning by using specified classes, subclasses, and data types. In an ontology, an RDF interpreter is available, through which extra RDF statements are inferred. As an enhancement to ontologies and RDFS, OWL is used, which is a language that enables the inference of more complex RDF statements, e.g. cardinality restrictions [3]. 
+</p>
+  
+<h3>Ontologies in the AEC industry</h3>
+  
+<p>The efforts by the International Alliance for Interoperability evolved into the Industry Foundation Classes (IFC) EXPRESS schema, which is a complex and large data model developed originally with the purpose of facilitating interoperability in the AEC industry. IFC allows users to describe, share, import and export building data models, by allowing developing IFC building models in XML formats. However, many challenges arose from using the IFC EXPRESS schema to adopt interoperability, including the difficulty of extending the EXPRESS schema, and the limitation of adapting it. Therefore, semantic web technologies were proposed as a possible solution to these challenges. As a first step, IfcOWL ontology has been proposed, which is an ontology resulting from the conversion of the EXPRESS schema into an OWL ontology. 
+A number of proposals have been proposed for the conversion of the IFC EXPRESS schema into ifcOWL ontology. For example, in [7] the IFC EXPRESS schema is converted into OWL through an unidirectional conversion map. Another 
+effort was made to develop an ontology for the IFC schema to support information retrieval [8]. The ifcOWL ontology is still evolving into a recommended usable ontology that can be used to achieve the main aims in the AEC domain. According to [3], The ifcOWL ontology has to meet three main criteria. First, the ifcOWL ontology should be developed using OWL2 DL, as it provides a high expressiveness for properties. Second, the ifcOWL ontology should be developed in accordance with the IFC EXPRESS schema as much as possible. Third, the primary aim of the ifcOWL ontology is to convert IFC instances into RDF files. With these three criteria in mind, the ifcOWL ontology can be developed by adopting “a unique URI for each ifcOWL ontology to a distinct EXPRESS schema of IFC” 
+In order to achieve linking across domains, semantic web technologies have also been proposed. Linking across domains is an essential aim in the AEC domain, because the AEC domain consists of a number of specialised departments, and in order to construct a building, they need a close collaboration. A management approach depending on ontological basis has been proposed to achieve close collaboration between the different teams that collaborate in the construction of a building (linking across domains) [4]. Semantic web technologies have also been proposed and applied to achieve logical inference. For example, the ifcOWL ontology has been used to check the energy performance of a building [5]. This is possible thanks to the rules and inference capabilities of the RDF reasoner contained in the ontology. The data about the building are used as input for the ifcOWL ontology. After that rules are applied to retrieve information about the energy efficiency of the building represented in the ifcOWL ontology. Another example of exploiting semantic web technologies to implement logical inference, is the use of ontologies to detect possible inconsistency in the design process of a building. Through the detection of design inconsistency, a reparation can take place to avoid the inconsistency [6].
+</p>
+  
+<h3>Towards a more usable IfcOWL ontology</h3>
+  
+<p>In order to exploit semantic web technologies in the construction domain, many efforts have been made that led to the proposal of the IfcOWL ontology. This ontology achieves to a large extent the above mentioned aims. However, IfcOWL seems to be a very large and complex ontology to be used easily, given the complexity in size of the original EXPRESS schema [9]. As a suggestion to reduce complexity, the ifcOWL ontology could be split into a number of small ontologies/modules. For example, for the ifcOWL ontology proposed in [3], the IFC EXPRESS schema was converted to OWL ontology by adopting a unique URI to each EXPRESS schema, resulting in four URI’s for each schema. Instead of keeping these four schemas converted into one big ontology, they should be split into four independent ontologies, which further could also be split in smaller ontologies. By splitting ifcOWL ontology into multiple smaller ontologies, end users will be able to easily load and use the ontology that they want to use, instead of loading the whole ifcOWL ontology. This is merely a suggestion, but it further should be implemented and tested to evaluate its usability, and successfulness. 
+</p>
+  
+<h3>Conclusion</h3>
 
-<h3>Discussion</h3>
-
-<p>...</p>
+<p>A number of efforts have been made to exploit semantic web technologies to achieve the aims of the AEC industry. These efforts have led to the proposed ifcOWL ontology converted from the IFC EXPRESS complex schema. IfcOWL ontology facilitates knowledge sharing and representation to a large extent in the AEC domain. However, it is still a large and complex ontology that needs further development and modification to be easily used. Therefore, a suggestion would be to split it into multiple ontologies that can be used independently. Further research would be the implementation of splitting the ifcOWL ontology and the evaluation of it. 
+</p>
 
 </div>
 
@@ -37,9 +57,22 @@ Your Name Here
 <h3>References</h3>
 
 <ul>
-<li>Replace this with reference 1</li>
-<li>Replace this with reference 2</li>
-<li>...</li>
+<li>[1] Pauwels, P., Zhang, S., & Lee, Y. C. (2017). Semantic web technologies in AEC industry: A literature overview. Automation in Construction, 73, 145-165.
+</li>
+<li>[2] Gruber, T. R. (1995). Toward principles for the design of ontologies used for knowledge sharing?. International journal of human-computer studies, 43(5-6), 907-928.</li>
+<li>[3] Pauwels, P., & Terkaj, W. (2016). EXPRESS to OWL for construction industry: Towards a recommendable and usable ifcOWL ontology. Automation in construction, 63, 100-133.</li>
+<li>[4] El-Diraby, T. E. (2013). Domain ontology for construction knowledge. Journal of Construction Engineering and Management, 139(7), 768-784.
+</li>
+<li>[5] Baumgärtel, K., Kadolsky, M., & Scherer, R. J. (2014, September). An ontology framework for improving building energy performance by utilizing energy saving regulations. In Proceedings of European conference on product and process modelling (pp. 519-526).
+</li>
+<li>[6] Kim, H., & Grobler, F. (2009). Design coordination in building information modeling (BIM) using ontological consistency checking. In Computing in Civil Engineering (2009) (pp. 410-420).
+</li>
+<li>[7] Schevers, H., & Drogemuller, R. (2005, November). Converting the industry foundation classes to the web ontology language. In 2005 First International Conference on Semantics, Knowledge and Grid (pp. 73-73). IEEE.
+</li>
+<li>[8] Gao, G., Liu, Y. S., Wang, M., Gu, M., & Yong, J. H. (2015). A query expansion method for retrieving online BIM resources based on Industry Foundation Classes. Automation in construction, 56, 14-25.
+</li>
+<li>[9] Zhang, L., & Issa, R. R. (2011, July). Development of IFC-based construction industry ontology for information retrieval from IFC models. In Proceedings of the 2011 Eg-Ice Workshop, University of Twente, The Netherlands (Vol. 68).
+</li>
 </ul>
 
 
